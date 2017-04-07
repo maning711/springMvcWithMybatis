@@ -18,4 +18,8 @@ import java.util.Map;
 public interface TestMapper {
 
     public List<Map<String, Object>> findUser();
+
+    public void outMoney(Map<String, Object> map);
+
+    public void inMoney(Map<String, Object> map);
 }
