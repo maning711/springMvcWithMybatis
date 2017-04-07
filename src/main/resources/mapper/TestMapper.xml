@@ -16,4 +16,11 @@
         <!--<association property="grade" column="gid" select="com.qbd.mapper.GradeMappers.findbyid">-->
         <!--</association>-->
     <!--</resultMap>-->
+    <update id="outMoney">
+        UPDATE t_money SET t_money.cash = t_money.cash - ${money} where t_money.count = ${count}
+    </update>
+
+    <update id="inMoney">
+        UPDATE t_money SET t_money.cash = t_money.cash + ${money} where t_money.count = ${count}
+    </update>
 </mapper>
